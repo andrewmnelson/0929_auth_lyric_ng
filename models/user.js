@@ -27,7 +27,6 @@ userSchema.methods.compareHash = function(password, callback) {
 };
 
 userSchema.methods.generateToken = function(callback) {
-  console.log(this);
   eat.encode({id: this._id}, secret, callback);
 };
 
